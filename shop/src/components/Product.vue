@@ -5,7 +5,8 @@
                 <q-input v-model="myName" type="text" hint="Name" />
                 <q-input v-model="myPrice" type="number" hint="price" />
                 <q-input v-model="myDescription" filled clearable type="textarea" shadow-text />
-                <q-input v-model="myImg" @input="val => { file = val[0] }" filled type="file" hint="jpg, jpeg, png"/>
+                <q-input v-model="myImg" type="text" hint="Image Url" />
+
                 <q-btn @click.prevent="onSubmit()" class="q-mt-4" color="black" label="Add" />
             </div>
         </div>
