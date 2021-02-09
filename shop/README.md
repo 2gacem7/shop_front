@@ -1,5 +1,7 @@
 # shop
 
+A little front-end project with vuex and quasar vue js
+
 ## Project setup
 ```
 npm install
