@@ -1,27 +1,23 @@
 <template>
-    <div>
-    <div v-for="card in product" :key="card">
-    <div class="q-pa-md row items-start q-gutter-md">
-    <q-card class="my-card">
-      <img :src= card.myImg>
-      <q-card-section>
-        <div class="text-h6">{{ card.myName }}</div>
-        <div class="text-subtitle2">{{ card.myPrice }}</div>
-      </q-card-section>
-
-      <q-card-section class="q-pt-none">
-        {{ card.myDescription }}
-      </q-card-section>
-    </q-card>
+    <div class="q-pa-md row items-start q-gutter-md justify-center">
+        <div v-for="card in product" :key="card">
+            <q-card class="my-card col-md-6 col-xs-12">
+                <img :src= card.myImg class="responsive">
+                <q-card-section>
+                    <div class="text-h6">{{ card.myName }}</div>
+                    <div class="text-subtitle2">{{ card.myPrice }} €</div>
+                </q-card-section>
+                <q-card-section class="q-pt-none">
+                    {{ card.myDescription }}
+                </q-card-section>
+            </q-card>
+        </div>
     </div>
-    </div>
-    </div>
-    
 </template>
 
+
+
 <script>
-
-
 export default {
     data () {
         return {
@@ -31,6 +27,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="sass" scoped>
+.my-card 
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  height: 550px;
 </style>
